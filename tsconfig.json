@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+    "lib": ["dom", "esnext"],//?? imp?
+    "declaration": true,//?? imp?
+    "declarationDir": "dist/types",//?? imp?
+    "outDir": "dist",//?? imp?
+    "strict": true,
+    "moduleResolution": "node",//?? imp?
+    "esModuleInterop": true,//?? imp?
+    "jsx": "react-jsx",
+    "skipLibCheck": true //?? imp?
+  },
+  "include": ["src"],//?? imp?
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.test.tsx"]//?? imp?
+}
