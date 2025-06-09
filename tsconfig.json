@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "ESNext",
-    "lib": ["dom", "esnext"],//?? imp?
-    "declaration": true,//?? imp?
-    "declarationDir": "dist/types",//?? imp?
-    "outDir": "dist",//?? imp?
-    "strict": true,
-    "moduleResolution": "node",//?? imp?
-    "esModuleInterop": true,//?? imp?
-    "jsx": "react-jsx",
-    "skipLibCheck": true //?? imp?
+    "target": "ES6",                // Good, outputs ES6 compatible JS
+    "module": "ESNext",             // Needed for ESM output in Rollup
+    "lib": ["dom", "esnext"],       // Important if you target browser APIs + modern JS features
+    "declaration": true,            // Important! Generates `.d.ts` type declarations for TS users
+    "declarationDir": "dist/types", // Good to keep type declarations organized
+    "outDir": "dist",               // Output JS files here
+    "strict": true,                 // Enables all strict type-checking options (recommended)
+    "moduleResolution": "node",    // Important! Resolves modules in Node style
+    "esModuleInterop": true,        // Important for compatibility with CommonJS modules
+    "jsx": "react-jsx",             // Use React 17+ JSX transform
+    "skipLibCheck": true            // Skips type checks on external libraries, speeds up build
   },
-  "include": ["src"],//?? imp?
-  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.test.tsx"]//?? imp?
+  "include": ["src"],               // Only compile files in src folder
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.test.tsx"]  // Exclude unwanted files
 }
