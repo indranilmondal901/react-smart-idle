@@ -9,7 +9,7 @@ export default {
       sourcemap: true,
     },
     {
-      file:" dist/index.esm.js",
+      file:"dist/index.esm.js",
       format: 'esm',
       sourcemap: true,
     },
