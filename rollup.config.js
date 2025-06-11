@@ -1,24 +1,13 @@
-import typescript from 'rollup-plugin-typescript2';
+import { defineConfig } from "rollup";
+import typescript from "@rollup/plugin-typescript";
 
-export default {
-  input: 'src/index.ts',
-  output: [
-    {
-      file: "dist/index.cjs.js",
-      format: 'cjs',
-      sourcemap: true,
-    },
-    {
-      file:"dist/index.esm.js",
-      format: 'esm',
-      sourcemap: true,
-    },
-  ],
-  external: ['react'],
-  plugins: [
-    typescript({
-      tsconfig: './tsconfig.json',
-      clean: true,
-    }),
-  ],
-};
+export default defineConfig({
+  input: "src/index.ts",
+  output: {
+    dir: "dist",
+    format: "es",
+    name: "pack-to-ui",
+  },
+  external: ["react", "react-dom"],
+  plugins: [typescript({ tsconfig: "tsconfig.json" })],
+});
